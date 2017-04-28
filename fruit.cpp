@@ -5,7 +5,6 @@
 #include "fruit.h"
 
 namespace parser {
-	// Begin section of code that if
 	struct fruit_symbol_table : x3::symbols<FRUIT> {
 		fruit_symbol_table() {
 			add
