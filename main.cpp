@@ -45,12 +45,16 @@ int main() {
 	const auto& grammar = parser::fruit_type;
 	auto result = ast::FruitType {};
 
-	bool successful_parse = boost::spirit::x3::phrase_parse(it, end, grammar, boost::spirit::x3::ascii::space, result);
-	if (successful_parse && it == end) {
-		std::cout << "Parsing succeeded!\n";
-		std::cout << result.identifier << " is a kind of " << to_string(result.fruit) << "!\n";
-	} else {
-		std::cout << "Parsing failed!\n";
+	try {
+		bool successful_parse = boost::spirit::x3::phrase_parse(it, end, grammar, boost::spirit::x3::ascii::space, result);
+		if (successful_parse && it == end) {
+			std::cout << "Parsing succeeded!\n";
+			std::cout << result.identifier << " is a kind of " << to_string(result.fruit) << "!\n";
+		} else {
+			std::cout << "Parsing failed!\n";
+		}
+	} catch(...) {
+		std::cout << "Exception raised\n";
 	}
 
 	return 0;
@@ -58,9 +62,8 @@ int main() {
 
 std::string to_string(FRUIT fruit) {
 	switch (fruit) {
-		case FRUIT::APPLES:
-			return "apple";
-		case FRUIT::ORANGES:
-			return "orange";
+		case FRUIT::APPLES: return "apple";
+		case FRUIT::ORANGES: return "orange";
 	}
+	return "nothing";
 }
