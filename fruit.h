@@ -15,7 +15,7 @@ namespace parser {
 
 	BOOST_SPIRIT_DECLARE(fruit_grammar)
 
-	fruit_grammar make_fruit_grammar();
+	fruit_grammar const& make_fruit_grammar();
 }
 
 
