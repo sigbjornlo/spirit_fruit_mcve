@@ -5,7 +5,7 @@
 #ifndef SPIRIT_FRUIT_FRUIT_H
 #define SPIRIT_FRUIT_FRUIT_H
 
-#include "lib/spirit/include/boost/spirit/home/x3.hpp"
+#include <boost/spirit/home/x3.hpp>
 
 #include "common.h"
 
