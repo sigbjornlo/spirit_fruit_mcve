@@ -20,7 +20,7 @@ namespace parser {
 
 	BOOST_SPIRIT_INSTANTIATE(fruit_grammar, iterator_type, context_type);
 
-	fruit_grammar make_fruit_grammar() {
+	const fruit_grammar& make_fruit_grammar() {
 		return fruit;
 	}
 }

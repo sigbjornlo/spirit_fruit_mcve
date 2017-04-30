@@ -5,7 +5,7 @@
 #ifndef SPIRIT_FRUIT_FRUIT_H
 #define SPIRIT_FRUIT_FRUIT_H
 
-#include <boost/spirit/home/x3.hpp>
+#include "lib/spirit/include/boost/spirit/home/x3.hpp"
 
 #include "common.h"
 
@@ -15,7 +15,7 @@ namespace parser {
 
 	BOOST_SPIRIT_DECLARE(fruit_grammar)
 
-	fruit_grammar make_fruit_grammar();
+	const fruit_grammar& make_fruit_grammar();
 }
 
 

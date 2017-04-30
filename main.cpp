@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-#include <boost/spirit/home/x3.hpp>
+#include "lib/spirit/include/boost/spirit/home/x3.hpp"
 #include <boost/fusion/include/adapt_struct.hpp>
 
 #include "common.h"
